@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francoma <francoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 15:25:16 by francoma          #+#    #+#             */
-/*   Updated: 2023/03/08 15:39:15 by francoma         ###   ########.fr       */
+/*   Updated: 2023/03/11 19:19:11 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ typedef struct s_simulation
 
 # define NOBODY -1
 # define MAIN_SLEEP 1000
-# define PHILO_SLEEP 500
-# define PHILO_ORDERING_SLEEP 1500
+# define PHILO_SLEEP 100
+# define PHILO_ORDERING_SLEEP 2500
 # define SUCCESS 0
 
 t_simulation	*init_simulation(int argc, char *argv[]);

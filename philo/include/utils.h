@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francoma <francoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 15:44:47 by francoma          #+#    #+#             */
-/*   Updated: 2023/03/08 14:56:15 by francoma         ###   ########.fr       */
+/*   Updated: 2023/03/11 19:09:37 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 # define UTILS_H
 
 # include <stdlib.h>
+# include <stdint.h>
 # include <unistd.h>
 # include <pthread.h>
+
+# define ERROR -1
 
 typedef struct s_mutex_int
 {

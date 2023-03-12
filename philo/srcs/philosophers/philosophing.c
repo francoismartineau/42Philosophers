@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philosophing.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francoma <francoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 16:18:20 by francoma          #+#    #+#             */
-/*   Updated: 2023/03/08 15:56:00 by francoma         ###   ########.fr       */
+/*   Updated: 2023/03/11 19:22:14 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ void	*philosophing(void *arg)
 
 	philo = (t_philosopher *)arg;
 	philo->last_meal_ms = now();
+	if (philo->id % 2)
+		usleep(PHILO_ORDERING_SLEEP);
 	while (thinking(philo) != STOP
 		&& eating(philo) != STOP
 		&& sleeping(philo) != STOP)

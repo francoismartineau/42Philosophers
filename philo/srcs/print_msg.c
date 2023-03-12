@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_msg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francoma <francoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 11:07:24 by francoma          #+#    #+#             */
-/*   Updated: 2023/03/08 15:52:47 by francoma         ###   ########.fr       */
+/*   Updated: 2023/03/11 19:16:24 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	print_msg(t_philosopher *philo, char *format)
 {
-	pthread_mutex_lock(&philo->simulation->print_mutex);
-	if (read_mutex_int(&philo->simulation->over))
-	{
-		pthread_mutex_unlock(&philo->simulation->print_mutex);
-		return (STOP);
-	}
+	// pthread_mutex_lock(&philo->simulation->print_mutex);
+	// if (read_mutex_int(&philo->simulation->over))
+	// {
+	// 	pthread_mutex_unlock(&philo->simulation->print_mutex);
+	// 	return (STOP);
+	// }
 	printf(format, ms_since_program_start(), philo->id + 1);
-	pthread_mutex_unlock(&philo->simulation->print_mutex);
+	// pthread_mutex_unlock(&philo->simulation->print_mutex);
 	return (CONTINUE);
 }
 

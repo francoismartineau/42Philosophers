@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   forks_manips.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francoma <francoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 16:45:33 by francoma          #+#    #+#             */
-/*   Updated: 2023/03/08 14:30:32 by francoma         ###   ########.fr       */
+/*   Updated: 2023/03/11 19:21:15 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,6 @@ int	take_forks(t_philosopher *philo)
 		% philo->simulation->philo_qty];
 	if (left_fork == right_fork)
 		return (0);
-	if ((philo->id % 2 && philo->eat_count % 2)
-		|| (!(philo->id % 2) && !(philo->eat_count % 2)))
-		usleep(PHILO_ORDERING_SLEEP);
 	pthread_mutex_lock(&left_fork->mutex);
 	pthread_mutex_lock(&right_fork->mutex);
 	took_forks = (take_fork(philo, left_fork) && take_fork(philo, right_fork));

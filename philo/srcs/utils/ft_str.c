@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francoma <francoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:26:41 by francoma          #+#    #+#             */
-/*   Updated: 2023/03/08 11:07:40 by francoma         ###   ########.fr       */
+/*   Updated: 2023/03/11 19:10:19 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ size_t	ft_strlen(const char *s)
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	int	res;
+
 	if (!s)
 		return ;
-	write(fd, s, ft_strlen(s));
+	res = write(fd, s, ft_strlen(s));
+	(void) res;
 }
